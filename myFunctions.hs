@@ -92,3 +92,6 @@ filter' p (x : xs)
 
 largestDivider :: (Integral a) => a
 largestDivider = head (filter p [1000000, 999999 ..]) where p x = x `mod` 3829 == 0
+
+sum' :: (Num a) => [a] -> a
+sum' xs = foldl (\acc x -> acc + x) 0 xs
