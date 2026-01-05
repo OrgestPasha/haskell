@@ -95,3 +95,13 @@ largestDivider = head (filter p [1000000, 999999 ..]) where p x = x `mod` 3829 =
 
 sum' :: (Num a) => [a] -> a
 sum' xs = foldl (\acc x -> acc + x) 0 xs
+
+maximum' :: (Ord a) => [a] -> a
+maximum' xs = foldr1 (\x acc -> if x > acc then x else acc) xs
+
+reverse' :: [a] -> [a]
+reverse' xs = foldl (\acc x -> x : acc) [] xs
+
+someThing = map (doubleMe . doubleSmallNumber) lostNumbers
+
+data Shape = Rectangle Float Float Float Float | Circle Float Float Float
