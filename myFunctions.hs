@@ -105,3 +105,6 @@ reverse' xs = foldl (\acc x -> x : acc) [] xs
 someThing = map (doubleMe . doubleSmallNumber) lostNumbers
 
 data Shape = Rectangle Float Float Float Float | Circle Float Float Float
+
+removeVal :: (Ord a) => [a] -> a -> [a]
+removeVal xs val = [x | x <- xs, x /= val]
